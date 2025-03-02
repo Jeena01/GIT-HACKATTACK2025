@@ -1,4 +1,5 @@
 import { Tabs } from "expo-router"
+import { Stack } from "expo-router"
 import { Feather, MaterialIcons } from "@expo/vector-icons"
 
 export default function TabLayout() {
