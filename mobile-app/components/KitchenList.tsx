@@ -1,6 +1,6 @@
 "use client"
 
-import type { KitchenItem } from "@/types/kitchen"
+import type { KitchenItem } from "../types/kitchen"
 import { motion } from "framer-motion"
 import React from "react"
 

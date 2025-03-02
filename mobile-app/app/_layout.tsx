@@ -1,40 +1,52 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { Tabs } from "expo-router"
+import { Feather, MaterialIcons } from "@expo/vector-icons"
 
-import { useColorScheme } from 'react-native';
-import React from 'react';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
+export default function TabLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#fff",
+          borderTopColor: "#e0e0e0",
+          height: 60,
+          paddingBottom: 8,
+        },
+        tabBarActiveTintColor: "#005c45",
+        tabBarInactiveTintColor: "#666",
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Kitchen",
+          tabBarIcon: ({ color, size }) => <MaterialIcons name="kitchen" size={size} color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: "Explore",
+          tabBarIcon: ({ color, size }) => <Feather name="search" size={size} color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="scan"
+        options={{
+          title: "Scan",
+          tabBarIcon: ({ color, size }) => <Feather name="camera" size={size} color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="stats"
+        options={{
+          title: "Stats",
+          tabBarIcon: ({ color, size }) => <Feather name="bar-chart-2" size={size} color={color} />,
+        }}
+      />
+    </Tabs>
+  )
 }
