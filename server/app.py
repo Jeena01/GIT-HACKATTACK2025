@@ -4,6 +4,9 @@ from PIL import Image
 import io
 import os
 import json 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 import sqlite3
 
 conn = sqlite3.connect('database.db')
