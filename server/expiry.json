@@ -1,0 +1,85 @@
+
+{
+  "perishable_grocery_items": [
+    {
+      "item": "Chicken",
+      "days_until_expiry": 2
+    },
+    {
+      "item": "Beef",
+      "days_until_expiry": 4
+    },
+    {
+      "item": "Pork ",
+      "days_until_expiry": 4
+    },
+    {
+      "item": "Fish ",
+      "days_until_expiry": 2
+    },
+    {
+      "item": "Shrimp ",
+      "days_until_expiry": 2
+    },
+    {
+      "item": "Milk",
+      "days_until_expiry": 7
+    },
+    {
+      "item": "Yogurt",
+      "days_until_expiry": 10
+    },
+    {
+      "item": "Cheese",
+      "days_until_expiry": 10
+    },
+    {
+      "item": "Eggs",
+      "days_until_expiry": 20
+    },
+    {
+      "item": "Lettuce",
+      "days_until_expiry": 5
+    },
+    {
+      "item": "Spinach",
+      "days_until_expiry": 5
+    },
+    {
+      "item": "Carrots",
+      "days_until_expiry": 21
+    },
+    {
+      "item": "Tomatoes",
+      "days_until_expiry": 5
+    },
+    {
+      "item": "Bananas",
+      "days_until_expiry": 6
+    },
+    {
+      "item": "Apples",
+      "days_until_expiry": 21
+    },
+    {
+      "item": "Oranges",
+      "days_until_expiry": 17
+    },
+    {
+      "item": "berries",
+      "days_until_expiry": 5
+    },
+    {
+      "item": "Grapes",
+      "days_until_expiry": 10
+    },
+    {
+      "item": "Avocados",
+      "days_until_expiry": 4
+    },
+    {
+      "item": "Bread",
+      "days_until_expiry": 7
+    }
+  ]
+}
