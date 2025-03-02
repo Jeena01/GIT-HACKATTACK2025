@@ -10,6 +10,22 @@
   },
   "include": [
     "**/*.ts",
+<<<<<<< HEAD
     "**/*.tsx"
   ]
+||||||| 1db580b
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+=======
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  
+  "compilerOptions": {
+    "jsx": "react"
+  }
+>>>>>>> 0723ac166dd6e0351f938e2529df9c46402ba997
 }
